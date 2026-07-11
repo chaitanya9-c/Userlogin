@@ -9,7 +9,7 @@ const PORT = 5000;
 const sequelize = require("./config/database");
 
 // Import Models
-require("./models/User");
+require("./models/user");
 require("./models/Note");
 
 // Routes
@@ -18,7 +18,6 @@ const noteRoutes = require("./routes/noteRoutes");
 
 app.use(cors());
 app.use(express.json());
-
 app.use("/api/users", userRoutes);
 app.use("/api/notes", noteRoutes);
 
